@@ -1,0 +1,48 @@
+{
+  "name": "pancake-profile-api",
+  "version": "1.2.1",
+  "description": "Serverless API implementation for PancakeSwap Profile contract",
+  "main": "api/version.ts",
+  "repository": "git@github.com:pancakeswap/pancake-profile-api.git",
+  "author": "PancakeSwap",
+  "license": "GPL-3.0-or-later",
+  "scripts": {
+    "format:check": "prettier --check '*/**/*.{js,ts}'",
+    "format:write": "prettier --write '*/**/*.{js,ts}'",
+    "lint": "eslint '*/**/*.{js,ts}'",
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn format:check",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "dependencies": {
+    "@types/json2csv": "^5.0.3",
+    "ethers": "^5.4.0",
+    "graphql": "^15.5.0",
+    "graphql-request": "^3.5.0",
+    "json2csv": "^5.0.6",
+    "mongoose": "^5.13.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^12.1.4",
+    "@commitlint/config-conventional": "^12.1.4",
+    "@types/jest": "^26.0.23",
+    "@types/node": "^15.12.5",
+    "@typescript-eslint/eslint-plugin": "^4.28.0",
+    "@typescript-eslint/parser": "^4.28.0",
+    "@vercel/node": "^1.12.0",
+    "eslint": "^7.29.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-jest": "^24.3.6",
+    "husky": "^4.3.8",
+    "jest": "^27.0.6",
+    "prettier": "^2.3.2",
+    "ts-jest": "^27.0.3",
+    "ts-node": "^10.0.0",
+    "typescript": "^4.4.2"
+  }
+}
