@@ -10,11 +10,12 @@ let connection: Connection | null = null;
 export const getConnection = async (): Promise<Connection> => {
   if (connection === null) {
     /* istanbul ignore next */
-    const uri = process.env.MONGO_URI ?? "mongodb://localhost:27017/profile";
+    const uri = process.env.MONGO_URI ?? "mongodb+srv://kazama-nft-api:X33ZASGgnBjuKbWX@cluster0.iplwndz.mongodb.net/PROFILE?retryWrites=true&w=majority";
     connection = mongoose.createConnection(uri, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
+      autoIndex: true,
       bufferCommands: false,
       bufferMaxEntries: 0,
     });
@@ -23,6 +24,7 @@ export const getConnection = async (): Promise<Connection> => {
     connection.model("User", userSchema);
   }
 
+  console.log('Connection SUCCESSFULL ..');
   return connection;
 };
 

@@ -1,7 +1,7 @@
 import blacklist from "./blacklist.json";
 import { getModel } from "./mongo";
 
-export const PROFILE_SUBGRAPH = "https://api.thegraph.com/subgraphs/name/kazamaswap/kazama-profile-v3";
+export const PROFILE_SUBGRAPH = "https://api.thegraph.com/subgraphs/name/kazamaswap/kazama-profile-v4";
 
 /**
  * Check for the validity of a username based on rules (see documentation).
